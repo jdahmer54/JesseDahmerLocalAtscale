@@ -1,0 +1,30 @@
+unique_name: customer
+object_type: dimension
+label: customer
+hierarchies:
+  - unique_name: customer_hierarchy
+    label: customer_hierarchy
+    levels:
+      - unique_name: customername
+  - unique_name: HighEarner
+    label: HighEarner
+    levels:
+      - unique_name: highearnerflag
+level_attributes:
+  - unique_name: customername
+    label: customername
+    contains_unique_names: false
+    dataset: dim_customer
+    is_unique_key: false
+    key_columns:
+      - customer_key
+    name_column: first_name
+  - unique_name: highearnerflag
+    label: highearnerflag
+    contains_unique_names: false
+    dataset: dim_customer
+    is_unique_key: false
+    key_columns:
+      - HigherEarningCustomers
+    name_column: HigherEarningCustomers
+type: standard

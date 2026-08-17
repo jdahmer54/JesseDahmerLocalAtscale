@@ -1,0 +1,61 @@
+unique_name: dim_customer
+object_type: dataset
+label: dim_customer
+columns:
+  - name: customer_key
+    data_type: int
+  - name: geography_key
+    data_type: int
+  - name: customer_alternate_key
+    data_type: string
+  - name: title
+    data_type: string
+  - name: first_name
+    data_type: string
+  - name: middle_name
+    data_type: string
+  - name: last_name
+    data_type: string
+  - name: name_style
+    data_type: boolean
+  - name: birth_date
+    data_type: date
+  - name: marital_status
+    data_type: string
+  - name: suffix
+    data_type: string
+  - name: gender
+    data_type: string
+  - name: email_address
+    data_type: string
+  - name: yearly_income
+    data_type: decimal(19,4)
+  - name: total_children
+    data_type: int
+  - name: number_children_at_home
+    data_type: int
+  - name: english_education
+    data_type: string
+  - name: english_occupation
+    data_type: string
+  - name: house_owner_flag
+    data_type: string
+  - name: number_cars_owned
+    data_type: int
+  - name: address_line1
+    data_type: string
+  - name: address_line2
+    data_type: string
+  - name: phone
+    data_type: string
+  - name: date_first_purchase
+    data_type: date
+  - name: commute_distance
+    data_type: string
+  - name: HigherEarningCustomers
+    data_type: string
+    sql: >-
+      case when english_occupation in ('Professional', 'Management') then 'Y'
+      else 'N' end
+connection_id: con_jessedahmer_adventureworksdw
+table: dim_customer

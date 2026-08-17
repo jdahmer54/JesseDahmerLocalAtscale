@@ -1,0 +1,37 @@
+unique_name: jdate
+object_type: dimension
+label: jdate
+hierarchies:
+  - unique_name: jdate_hierarchy
+    label: jdate_hierarchy
+    levels:
+      - unique_name: year_key
+      - unique_name: month_key
+      - unique_name: jdate_day
+level_attributes:
+  - unique_name: jdate_day
+    label: jdate_day
+    contains_unique_names: false
+    dataset: dim_date_jd
+    is_unique_key: false
+    key_columns:
+      - date_key
+    name_column: date_day
+    time_unit: day
+  - unique_name: month_key
+    label: month_key
+    contains_unique_names: false
+    dataset: dim_date_jd
+    key_columns:
+      - month_key
+    name_column: month_label
+    time_unit: month
+  - unique_name: year_key
+    label: year_key
+    contains_unique_names: false
+    dataset: dim_date_jd
+    key_columns:
+      - year_key
+    name_column: year_key
+    time_unit: year
+type: time
