@@ -1,0 +1,7 @@
+unique_name: m_grain_fact_date_key_dc
+object_type: metric
+label: grain_days
+calculation_method: count distinct
+column: date_key
+dataset: grain_fact
+unrelated_dimensions_handling: repeat

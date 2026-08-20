@@ -4,6 +4,10 @@ label: InternetSalesModel
 metrics:
   - unique_name: m_fact_internet_sales_order_quantity_sum
   - unique_name: m_fact_internet_sales_customer_key_dc
+  - unique_name: m_grain_fact_date_key_dc
+  - unique_name: m_grain_fact_week_key_dc
+  - unique_name: m_grain_fact_month_key_dc
+  - unique_name: m_grain_fact_year_key_dc
 relationships:
   - unique_name: fact_internet_sales_order_date_key_to_jdate_jdate_day
     from:
@@ -21,3 +25,11 @@ relationships:
     to:
       dimension: customer
       level: customername
+  - unique_name: grain_fact_year_key_to_jdate_jdate_day
+    from:
+      dataset: grain_fact
+      join_columns:
+        - date_key
+    to:
+      dimension: jdate
+      level: jdate_day

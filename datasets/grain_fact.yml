@@ -1,0 +1,28 @@
+unique_name: grain_fact
+object_type: dataset
+label: grain_fact
+columns:
+  - name: date_key
+    data_type: int
+  - name: date_day
+    data_type: date
+  - name: week_key
+    data_type: int
+  - name: week_label
+    data_type: string
+  - name: month_key
+    data_type: int
+  - name: month_label
+    data_type: string
+  - name: quarter_key
+    data_type: int
+  - name: quarter_label
+    data_type: string
+  - name: year_key
+    data_type: int
+connection_id: con_jessedahmer_adventureworksdw
+sql: >-
+  Select date_key, date_day, week_key, week_label, month_key, month_label,
+  quarter_key, quarter_label, year_key
+
+  from adventureworksdw.dim_date_jd
