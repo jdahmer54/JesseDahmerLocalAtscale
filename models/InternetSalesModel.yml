@@ -8,6 +8,7 @@ metrics:
   - unique_name: m_grain_fact_week_key_dc
   - unique_name: m_grain_fact_month_key_dc
   - unique_name: m_grain_fact_year_key_dc
+  - unique_name: QTY-Previous Period
 relationships:
   - unique_name: fact_internet_sales_order_date_key_to_jdate_jdate_day
     from:

@@ -1,0 +1,6 @@
+unique_name: QTY-Previous Period
+object_type: metric_calc
+label: QTY-Previous Period
+expression: >-
+  ([jdate].CurrentMember.prevMember,
+  [Measures].[m_fact_internet_sales_order_quantity_sum])
